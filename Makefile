@@ -19,8 +19,8 @@ LD      = $(TOOL_DIR)arm-none-eabi-gcc
 OBJCPY  = $(TOOL_DIR)arm-none-eabi-objcopy
 
 #Flags
-CFLAGS  = -mcpu=cortex-m4 -mthumb -mthumb-interwork -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 --specs=tz10xx.specs -std=c99 -g -O0
-LDFLAGS = -mcpu=cortex-m4 -mthumb -mthumb-interwork -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 --specs=tz10xx.specs -T $(DFP_PATH)/Device/Source/GCC/gcc_TZ10xx.ld -Wl,-Map=$(BLD_DIR)$(TARGET).map
+CFLAGS  = -mcpu=cortex-m4 -mthumb -mthumb-interwork -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 -std=c99 -g -O0
+LDFLAGS = -mcpu=cortex-m4 -mthumb -mthumb-interwork -march=armv7e-m -mfloat-abi=softfp -mfpu=fpv4-sp-d16 --specs=nosys.specs -T $(DFP_PATH)/Device/Source/GCC/gcc_TZ10xx.ld -Wl,-Map=$(BLD_DIR)$(TARGET).map
 LIBS    = 
 
 #Include dir, Source files.
